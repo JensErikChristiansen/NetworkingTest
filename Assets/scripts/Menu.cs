@@ -63,7 +63,10 @@ public class Menu : MonoBehaviour {
     [RPC]
     void AskChangeColor()
     {
-        nView.RPC("ChangeColor", RPCMode.All);
+        if (Network.isServer)
+        {
+            nView.RPC("ChangeColor", RPCMode.All);
+        }
     }
 
     [RPC]
