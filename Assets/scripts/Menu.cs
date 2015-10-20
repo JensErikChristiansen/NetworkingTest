@@ -3,15 +3,17 @@ using System.Collections;
 
 public class Menu : MonoBehaviour {
 
-	public string IP = "127.0.0.1";
+	public string IP = "142.232.154.95";
 	public int port = 25001;
     private NetworkView nView;
+    private Color color;
 
     public GameObject testSphere;
 
     void Start()
     {
         nView = GetComponent<NetworkView>();
+        color = Color.red;
     }
 
 	void OnGUI()
@@ -41,7 +43,7 @@ public class Menu : MonoBehaviour {
 
                 if (GUI.Button(new Rect(100, 150, 100, 25), "Change Color"))
                 {
-                    nView.RPC("ChangeColor", RPCMode.All);
+                    nView.RPC("AskChangeColor", RPCMode.Server);
                 }
             }
 
@@ -59,10 +61,14 @@ public class Menu : MonoBehaviour {
     } // end OnGUI()
 
     [RPC]
+    void AskChangeColor()
+    {
+        nView.RPC("ChangeColor", RPCMode.All);
+    }
+
+    [RPC]
     void ChangeColor()
     {
-        Color color = Color.red;
-
         if (color == Color.red)
         {
             color = Color.blue;
