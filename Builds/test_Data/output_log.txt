@@ -14,19 +14,12 @@ Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\te
 Loading C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.160 seconds
+- Completed reload, in  0.086 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\System.dll (this message is harmless)
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1148 -> priority: 1 
 Initialize engine version: 5.2.1f1 (44735ea161b3)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -43,16 +36,15 @@ Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\te
 Loading C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.087 seconds
+- Completed reload, in  0.061 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: f54 -> priority: 1 
+  Thread -> id: 2ab8 -> priority: 1 
+Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\NetworkingTest\Builds\test_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2454 -> priority: 1 
