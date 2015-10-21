@@ -9,7 +9,6 @@ public class NetworkManager : MonoBehaviour {
 	public int port = 25002;
     private NetworkView nView;
 
-    public GameObject testObject;
     public GameObject prefab;
 
     void Start()
@@ -17,7 +16,6 @@ public class NetworkManager : MonoBehaviour {
         nView = GetComponent<NetworkView>();
     }
 
-    //--------------------------------------------------------
     /// <summary>
     /// Starts the server.
     /// </summary>
@@ -101,15 +99,6 @@ public class NetworkManager : MonoBehaviour {
     [RPC]
     void SpawnObject(float randomValueX, float randomValueY)
     {
-
-        if (testObject != true)
-        {
-            testObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        }
-        else if (testObject.GetComponent<Renderer>().enabled == false)
-        {
-            testObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        }
         Instantiate(prefab, new Vector3(randomValueX, randomValueY, 0), Quaternion.identity);
     }
 
