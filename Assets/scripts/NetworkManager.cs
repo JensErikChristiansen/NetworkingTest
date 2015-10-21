@@ -7,16 +7,12 @@ public class NetworkManager : MonoBehaviour {
 	public string IP = "142.232.154.95";
 	public int port = 25002;
     private NetworkView nView;
-    private Color color;
-
-    public GameObject testSphere;
 
     public GameObject testObject;
 
     void Start()
     {
         nView = GetComponent<NetworkView>();
-        color = Color.red;
     }
 
     //--------------------------------------------------------
@@ -121,19 +117,5 @@ public class NetworkManager : MonoBehaviour {
             nView.RPC("ChangeColor", RPCMode.All);
         }
     }
-
-    [RPC]
-    void ChangeColor()
-    {
-        if (color == Color.red)
-        {
-            color = Color.blue;
-        } else
-        {
-            color = Color.red;
-        }
-
-        testSphere.GetComponent<Renderer>().material.color = color;
-    } // end ChangeColor()
 
 }
