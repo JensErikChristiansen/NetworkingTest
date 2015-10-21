@@ -5,7 +5,7 @@ using System.Net;
 [RequireComponent(typeof(NetworkView))] // because we will use rpc calls
 public class NetworkManager : MonoBehaviour {
 
-	public string IP = Network.player.ipAddress;
+	public string IP = "127.0.0.1";
 	public int port = 25002;
     private NetworkView nView;
     public static bool Connected { get; private set; }
