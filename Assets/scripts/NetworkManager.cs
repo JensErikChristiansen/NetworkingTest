@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Net;
 
 [RequireComponent(typeof(NetworkView))] // because we will use rpc calls
 public class NetworkManager : MonoBehaviour {
 
-	public string IP = "142.232.154.95";
+	public string IP = Network.player.ipAddress;
 	public int port = 25002;
     private NetworkView nView;
 
     public GameObject testObject;
+    public GameObject prefab;
 
     void Start()
     {
@@ -43,6 +45,8 @@ public class NetworkManager : MonoBehaviour {
         } // end if disconnected
         else
         {
+            GUI.Label(new Rect(0, 0, 200, 10), "IP: " + Network.player.externalIP);
+
             if (Network.peerType == NetworkPeerType.Client)
             {
                 GUI.Label(new Rect(100, 100, 100, 25), "Client");
@@ -106,7 +110,7 @@ public class NetworkManager : MonoBehaviour {
         {
             testObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
         }
-        Instantiate(testObject, new Vector3(randomValueX, randomValueY, 0), Quaternion.identity);
+        Instantiate(prefab, new Vector3(randomValueX, randomValueY, 0), Quaternion.identity);
     }
 
     [RPC]
