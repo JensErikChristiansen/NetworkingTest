@@ -15,7 +15,7 @@ Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngin
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.208 seconds
+- Completed reload, in  0.122 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -37,18 +37,14 @@ Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngin
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.058 seconds
+- Completed reload, in  0.064 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 270c -> priority: 1 
+  Thread -> id: 2d10 -> priority: 1 
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: f54 -> priority: 1 
-The server has disconnected from the client. Most likely the server has shut down.
- 
-(Filename:  Line: 761)
-
+  Thread -> id: 24a4 -> priority: 1 
