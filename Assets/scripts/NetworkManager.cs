@@ -8,12 +8,28 @@ public class NetworkManager : MonoBehaviour {
 	public string IP = Network.player.ipAddress;
 	public int port = 25002;
     private NetworkView nView;
+    public static bool Connected { get; private set; }
 
     public GameObject prefab;
 
     void Start()
     {
         nView = GetComponent<NetworkView>();
+    }
+
+    private void OnServerInitialized()
+    {
+        Connected = true;
+    }
+
+    private void OnConnectedToServer()
+    {
+        Connected = true;
+    }
+
+    private void OnDisconnectedFromServer()
+    {
+        Connected = false;
     }
 
     /// <summary>
@@ -43,7 +59,7 @@ public class NetworkManager : MonoBehaviour {
         } // end if disconnected
         else
         {
-            GUI.Label(new Rect(0, 0, 200, 10), "IP: " + Network.player.externalIP);
+            GUI.Label(new Rect(0, 0, 200, 50), "IP: " + Network.player.externalIP);
 
             if (Network.peerType == NetworkPeerType.Client)
             {
@@ -51,11 +67,6 @@ public class NetworkManager : MonoBehaviour {
                 if (GUI.Button(new Rect(100, 125, 100, 25), "Logout"))
                 {
                     Network.Disconnect(250);
-                }
-
-                if (GUI.Button(new Rect(100, 150, 100, 25), "Spawn Object"))
-                {
-                    nView.RPC("AskSpawnObject", RPCMode.Server);
                 }
             }
 
