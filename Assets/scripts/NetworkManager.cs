@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Net;
 
 [RequireComponent(typeof(NetworkView))] // because we will use rpc calls
 public class NetworkManager : MonoBehaviour {
 
 	public string IP = "127.0.0.1";
-	public int port = 25002;
+	public int port = 25001;
     private NetworkView nView;
     public static bool Connected { get; private set; }
 
@@ -15,16 +14,6 @@ public class NetworkManager : MonoBehaviour {
     void Start()
     {
         nView = GetComponent<NetworkView>();
-    }
-
-    private void OnServerInitialized()
-    {
-        Connected = true;
-    }
-
-    private void OnConnectedToServer()
-    {
-        Connected = true;
     }
 
     private void OnDisconnectedFromServer()
@@ -38,7 +27,7 @@ public class NetworkManager : MonoBehaviour {
     private void StartServer()
     {
         bool useNat = !Network.HavePublicAddress();
-        Network.InitializeServer(4, port, false);
+        Network.InitializeServer(4, port, useNat);
         MasterServer.RegisterHost("Jens", "Jens Test", "NetworkingTest");
     }
 
@@ -48,17 +37,18 @@ public class NetworkManager : MonoBehaviour {
 		{
             if (GUI.Button(new Rect(100, 100, 100, 25), "Start Client"))
             {
-                Network.Connect(IP, port);
+                NetworkConnectionError error = Network.Connect(IP, port);
             }
 
             if (GUI.Button(new Rect(100, 125, 100, 25), "Start Server"))
             {
                 StartServer();
-                //Network.InitializeServer(4, port, useNat);
             }
         } // end if disconnected
         else
         {
+            Connected = true;
+
             GUI.Label(new Rect(0, 0, 200, 50), "IP: " + Network.player.externalIP);
 
             if (Network.peerType == NetworkPeerType.Client)
@@ -96,8 +86,8 @@ public class NetworkManager : MonoBehaviour {
     {
         if (Network.isServer)
         {
-            float randomX = Random.Range(-Screen.width, Screen.width) / 100;
-            float randomY = Random.Range(-Screen.height, Screen.height) / 100;
+            float randomX = Random.Range(Screen.width * -1, Screen.width) / 100;
+            float randomY = Random.Range(Screen.height * -1, Screen.height) / 100;
             GetComponent<NetworkView>().RPC("SpawnObject", RPCMode.All, randomX, randomY);
         }
     }
@@ -111,15 +101,6 @@ public class NetworkManager : MonoBehaviour {
     void SpawnObject(float randomValueX, float randomValueY)
     {
         Instantiate(prefab, new Vector3(randomValueX, randomValueY, 0), Quaternion.identity);
-    }
-
-    [RPC]
-    void AskChangeColor()
-    {
-        if (Network.isServer)
-        {
-            nView.RPC("ChangeColor", RPCMode.All);
-        }
     }
 
 }
