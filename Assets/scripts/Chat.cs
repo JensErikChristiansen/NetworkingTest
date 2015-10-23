@@ -53,5 +53,6 @@ public class Chat : MonoBehaviour {
             //GUILayout.Label(chatHistory[i]);
             GUI.Label(new Rect(0, Screen.height - 40 - (25 * i), 200, 20), chatHistory[i]);
         }
+        
     }
 }
