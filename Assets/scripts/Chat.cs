@@ -37,8 +37,6 @@ public class Chat : MonoBehaviour {
         chatHistory.Add(message);
     }
 
-
-
     private void DisplayChat()
     {
         currentMessage = GUI.TextField(new Rect(0, Screen.height - 20, 200, 20), currentMessage);

@@ -4,21 +4,55 @@ using System.Collections;
 [RequireComponent(typeof(NetworkView))] // because we will use rpc calls
 public class NetworkManager : MonoBehaviour {
 
-	public string IP = "127.0.0.1";
-	public int port = 25001;
+	private string ip = "127.0.0.1";
+	private int port = 25001;
     private NetworkView nView;
     public static bool Connected { get; private set; }
+    public int Port
+    {
+        get { return port; }
+        set
+        {
+            port = value;
+        }
+    }
+    public string IP
+    {
+        get { return ip; }
+        set
+        {
+            if (value != null || value.Length == 0 || value == "")
+            {
+                ip = "127.0.0.1";
+            } else
+            {
+                ip = value;
+            }
+        }
+    }
 
     public GameObject prefab;
+    private ArrayList prefabs;
 
     void Start()
     {
         nView = GetComponent<NetworkView>();
+        prefabs = new ArrayList();
     }
 
     private void OnDisconnectedFromServer()
     {
         Connected = false;
+    }
+
+    private void OnConnectedToServer()
+    {
+        
+    }
+
+    private void OnServerInitialized()
+    {
+
     }
 
     /// <summary>
@@ -27,14 +61,16 @@ public class NetworkManager : MonoBehaviour {
     private void StartServer()
     {
         bool useNat = !Network.HavePublicAddress();
-        Network.InitializeServer(4, port, useNat);
-        MasterServer.RegisterHost("Jens", "Jens Test", "NetworkingTest");
+        Network.InitializeServer(4, port, true);
+        //MasterServer.RegisterHost("Jens", "Jens Test", "NetworkingTest");
     }
 
     void OnGUI()
 	{
 		if (Network.peerType == NetworkPeerType.Disconnected)
 		{
+            //ip = GUI.TextField(new Rect(0, 20, 200, 20), ip);
+
             if (GUI.Button(new Rect(100, 100, 100, 25), "Start Client"))
             {
                 NetworkConnectionError error = Network.Connect(IP, port);
@@ -49,7 +85,8 @@ public class NetworkManager : MonoBehaviour {
         {
             Connected = true;
 
-            GUI.Label(new Rect(0, 0, 200, 50), "IP: " + Network.player.externalIP);
+            GUI.Label(new Rect(0, 0, 200, 50), "IP: " + IP);
+            GUI.Label(new Rect(0, 15, 200, 50), "port: " + Network.player.port);
 
             if (Network.peerType == NetworkPeerType.Client)
             {

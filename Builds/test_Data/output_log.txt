@@ -15,36 +15,11 @@ Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngin
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.051 seconds
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+- Completed reload, in  0.090 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-Initialize engine version: 5.2.1f1 (44735ea161b3)
-GfxDevice: creating device client; threaded=1
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
-    Vendor:   Intel
-    VRAM:     896 MB
-Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.055 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
-<RI> Initializing input.
-<RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1184 -> priority: 1 
-Platform assembly: C:\Users\Jens\Desktop\NetworkingTest\Builds\test_Data\Managed\System.dll (this message is harmless)
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2904 -> priority: 1 
+  Thread -> id: 2a24 -> priority: 1 
