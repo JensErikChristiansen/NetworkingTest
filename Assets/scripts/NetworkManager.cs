@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(NetworkView))] // because we will use rpc calls
 public class NetworkManager : MonoBehaviour {
 
-	public string IP = "127.0.0.1";
+	public string IP = "40.78.157.137";
 	public int port = 25001;
     private NetworkView nView;
     public static bool Connected { get; private set; }
@@ -37,7 +37,7 @@ public class NetworkManager : MonoBehaviour {
 		{
             if (GUI.Button(new Rect(100, 100, 100, 25), "Start Client"))
             {
-                NetworkConnectionError error = Network.Connect(IP, port);
+                NetworkConnectionError error = Network.Connect("40.78.157.137", port);
             }
 
             if (GUI.Button(new Rect(100, 125, 100, 25), "Start Server"))
